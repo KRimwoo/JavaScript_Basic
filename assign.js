@@ -6,6 +6,11 @@ export const makeIntro = (name, mbti) => {
 
   // 여기다 코드를 작성하세요.
   let introduce = '';
+  introduce += '안녕하세요! 제 이름은 ';
+  introduce += name;
+  introduce += '이고 mbti는 ';
+  introduce += mbti;
+  introduce += '입니다~';
 
   return introduce;
 };
@@ -18,6 +23,15 @@ export const assign2 = (arr, divisor) => {
 
   // 여기에 코드를 작성하세요.
   let answer = [];
-
+  arr.forEach((num) => {
+    if (num % divisor != 0)
+    {
+      answer.push(num);
+    }
+  });
+  if (!answer.length) {
+    answer.push("없어요!");
+  }
+  answer.sort();
   return answer;
 };
